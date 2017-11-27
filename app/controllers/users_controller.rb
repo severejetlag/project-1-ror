@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
 	def show 
 		@user = User.find(params[:id])
-    @user_softwares = @user.softwares
+    	@user_softwares = UserSoftware.where(user_id: @user.id)
 	end
 
   def edit
