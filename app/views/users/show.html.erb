@@ -2,3 +2,7 @@
 <h3><%= @user.first_name%> <%= @user.last_name%> </h3>
 <h3><%= @user.job_field %></h3>
 <h3><%= @user.job_title %></h3>
+
+<% if session[:user_id] == @user.id%>
+	<%= link_to "Edit Profile" , edit_user_path(@user) %>
+<% end %> 
