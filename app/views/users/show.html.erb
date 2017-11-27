@@ -15,9 +15,10 @@
 
 <h2>User Software</h2>
 <ul>
-	<% @user_softwares.each do |software| %> 
+	<% @user_softwares.each do |user_software| %> 
 		<li>
-			<h3><%= software.name %> </h3> 
+			<h3><%= user_software.software.name %> </h3> 
+			<p><%= user_software.description %></p>
 		</li>
 	<% end %> 
 </ul>
