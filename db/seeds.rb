@@ -34,15 +34,24 @@ softwaresList = [
 Software.create(softwaresList)
 
 
-50.times do |f|
+10.times do |f|
 	first_n = FFaker::Name.first_name
 	last_n = FFaker::Name.last_name
 	email = FFaker::Internet.free_email
 	username = FFaker::Internet.user_name
 	pass = FFaker::Internet.password
 	job = FFaker::Job.title
-	blurb = FFaker::Lorem.paragraphs
+	blurb = FFaker::Lorem.paragraph
 
 	User.create({first_name: first_n, last_name: last_n, email: email, username: username, password: pass, job_title:job, job_field: 'Tech', blurb: blurb})
 end
 
+User.all.each do |user|
+	telegram = Software.find_by_name('Telegram')
+	contexts = Software.find_by_name('Contexts')
+	sublime = Software.find_by_name('Sublime Text')
+
+	user.user_softwares << UserSoftware.new({:software => telegram,:description => FFaker::Lorem.paragraph })
+	user.user_softwares << UserSoftware.new({:software => contexts,:description => FFaker::Lorem.paragraph })
+	user.user_softwares << UserSoftware.new({:software => sublime,:description => FFaker::Lorem.paragraph })
+end
