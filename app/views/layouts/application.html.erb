@@ -23,6 +23,13 @@
       <small> <%= name.capitalize %>: <%= msg %> </small>
     </p>
     <% end %>
-    <%= yield %>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <%= yield %>
+          
+        </div>
+      </div>
+    </div>
   </body>
 </html>
