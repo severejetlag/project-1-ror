@@ -3,5 +3,5 @@
 	<h3><%= user.username %></h3>
 	<p><%= user.first_name %> </p>
 	<p><%= user.job_field%> : <%=user.job_title%> </p>
-
+	<%= link_to "View Profile", user_path(user) %>
 <% end %> 

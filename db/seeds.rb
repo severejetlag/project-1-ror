@@ -39,6 +39,10 @@ Software.create(softwaresList)
 	last_n = FFaker::Name.last_name
 	email = FFaker::Internet.free_email
 	username = FFaker::Internet.user_name
+	pass = FFaker::Internet.password
 	job = FFaker::Job.title
-	User.create(first_name: first_n, last_name: last_n, email: email, username: username, job_title:job, job_field: "Tech")
+	blurb = FFaker::Lorem.paragraphs
+
+	User.create({first_name: first_n, last_name: last_n, email: email, username: username, password: pass, job_title:job, job_field: 'Tech', blurb: blurb})
 end
+
