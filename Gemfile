@@ -5,15 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-<<<<<<< HEAD
-gem 'bootstrap-sass', '~> 3.2.0'
-gem 'autoprefixer-rails'
-
-=======
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'ffaker'
->>>>>>> d5359b513d5e463a95d52f611228c6c1da52e9bd
 gem 'pry-rails', :group => :development
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
